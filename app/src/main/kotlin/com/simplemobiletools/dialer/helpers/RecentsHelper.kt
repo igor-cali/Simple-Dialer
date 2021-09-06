@@ -62,8 +62,8 @@ class RecentsHelper(private val context: Context) {
             numberToSimIDMap[it.phoneNumber] = it.id
         }
 
-        val callLimit : Int = if(context?.config?.limitShownCalls) -1
-            else 1000
+        val callLimit : Int = if(context.config.limitShownCalls) 1000
+            else -1
 
         val cursor = if (isRPlus()) {
             val bundle = Bundle().apply {
